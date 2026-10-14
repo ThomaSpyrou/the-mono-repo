@@ -1,0 +1,3 @@
+# Runs every 10 minutes. Edit PROJECT_DIR and UV_BIN, then: crontab -e and paste the result.
+# Find UV_BIN with: command -v uv
+*/10 * * * * cd PROJECT_DIR && UV_BIN run python -m bolig_notifier.main >> PROJECT_DIR/data/notifier.log 2>&1

@@ -1,0 +1,9 @@
+[Unit]
+Description=blg bolig-notifier — check kereby.dk for matching listings
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory={{PROJECT_DIR}}
+ExecStart={{UV_BIN}} run python -m bolig_notifier.main

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.blg.bolig-notifier</string>
+
+	<key>ProgramArguments</key>
+	<array>
+		<string>{{UV_BIN}}</string>
+		<string>run</string>
+		<string>python</string>
+		<string>-m</string>
+		<string>bolig_notifier.main</string>
+	</array>
+
+	<key>WorkingDirectory</key>
+	<string>{{PROJECT_DIR}}</string>
+
+	<key>StartInterval</key>
+	<integer>600</integer>
+
+	<key>RunAtLoad</key>
+	<true/>
+
+	<key>StandardOutPath</key>
+	<string>{{PROJECT_DIR}}/data/notifier.log</string>
+
+	<key>StandardErrorPath</key>
+	<string>{{PROJECT_DIR}}/data/notifier.log</string>
+</dict>
+</plist>
